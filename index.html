@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Графики зависимости</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src=https://cdnjs.cloudflare.com/ajax/libs/mathjs/12.2.0/math.js></script>
+  <script src="all.min.js"></script>
+  <script src="index.js"></script>
+</head>
+<body>
+<h1>Одномерное прямолинейное движение</h1>
+<p align="center">
+  Везде используйте t<br>
+  Поддерживаемые функции:<br>
+  t^a - t в степени a<br>
+  sin(t) - синус t<br>
+  cos(t) - косинус t<br>
+  tan(t) - тангенс t<br>
+  sqrt(t) - квадратный корень из t<br>
+  log(t) - натуральный логарифм<br>
+</p>
+<form>
+  <label for="x-field">Зависимость пути от времени x(t):</label>
+  <input type="text" id="x-field" name="x">
+  <button type="button" onclick="drawGraphsFromX()">Построить графики, исходя из x(t)</button>
+  <label for="v-field">Зависимость скорости от времени v(t):</label>
+  <input type="text" id="v-field" name="v">
+  <button type="button" onclick="drawGraphsFromV()">Построить графики, исходя из v(t)</button>
+  <label for="a-field">Зависимость ускорения от времени a(t):</label>
+  <input type="text" id="a-field" name="a">
+  <button type="button" onclick="drawGraphsFromA()">Построить графики, исходя из a(t)</button>
+  <button type="button" onclick="clearGraphs()">Очистить графики и данные</button>
+</form>
+<div id="graphs"></div>
+</body>
+</html>
